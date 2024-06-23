@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Account Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .account-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .account {
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+        .account img {
+            max-width: 100%;
+            height: auto;
+        }
+        .account h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .account p {
+            color: #666;
+        }
+        .account .price {
+            color: #e60000;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .account a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .button {
+            background-color: #e60000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        form button {
+            background-color: #e60000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.container');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+                if (page.id === pageId) {
+                    page.classList.remove('hidden');
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="showPage('home')">
+    <header>
+        <h1>Fortnite Account Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Startseite</a></li>
+                <li><a href="#" onclick="showPage('about')">Über uns</a></li>
+                <li><a href="#" onclick="showPage('contact')">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div id="home" class="container">
+        <h2>Willkommen bei unserem Fortnite Account Shop</h2>
+        <p>Wir bieten eine Vielzahl von hochwertigen Fortnite-Accounts zu unschlagbaren Preisen. Egal, ob Sie nach einem hochstufigen Account mit vielen Skins und V-Bucks suchen oder einfach nur einen neuen Account für den Einstieg benötigen, wir haben das Richtige für Sie.</p>nite-Spielerlebnis!</p>
+        
+        <p>Unsere Accounts sind sicher und werden mit einer vollständigen Anleitung zur Übertragung geliefert. Kaufen Sie noch heute und verbessern Sie Ihr Fort
+        <div class="account-list">
+            <!-- Account Templates -->
+            <div class="account">
+                <img src="https://assetsdelivery.eldorado.gg/v7/_offers-v2_/16ff02dc-5b38-408b-abae-d368040f045a_Offer_20240622020215_5574473Large.jpg?w=255" alt="Account 1">
+                <h3>Account 1</h3>
+                <p>Level 100, 2000 V-Bucks</p>
+                <p class="price">€20</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://assetsdelivery.eldorado.gg/v7/_offers-v2_/google-oauth2%7C105817660320278494882_Offer_20240617192838_755896Large.jpg?w=255" alt="Account 2">
+                <h3>Account 2</h3>
+                <p>Level 200, 4000 V-Bucks</p>
+                <p class="price">€40</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://assetsdelivery.eldorado.gg/v7/_offers-v2_/google-oauth2%7C105817660320278494882_Offer_20240617195419_4556018Large.jpg?w=255" alt="Account 3">
+                <h3>Account 3</h3>
+                <p>Level 300, 6000 V-Bucks</p>
+                <p class="price">€60</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://cdn.discordapp.com/attachments/846417685901869087/1254361530493833216/IMG_5765.jpg?ex=667936b5&is=6677e535&hm=a19ab07c133a68e259bdb089d005906e0bb685ca6b557b4f19ce627bdc3c07e1&" alt="Account 4">
+                <h3>Account 4</h3>
+                <p>Level 400, 8000 V-Bucks</p>
+                <p class="price">€80</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <!-- Additional Accounts -->
+            <div class="account">
+                <img src="https://cdn.discordapp.com/attachments/846417685901869087/1254358758121799680/IMG_5759.jpg?ex=66793420&is=6677e2a0&hm=08150992ad4109fa82c4003bd93aeda55bbba0d7b69e4867cf759aa7f3c063d9&" alt="Account 5">
+                <h3>Account 5</h3>
+                <p>Level 500, 10000 V-Bucks</p>
+                <p class="price">€100</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://cdn.discordapp.com/attachments/846417685901869087/1254361530078855198/IMG_5764.jpg?ex=667936b5&is=6677e535&hm=ea7e49332af00e056493c5992379353a9fafe7466aeda41182afc0db9d21dae1&" alt="Account 6">
+                <h3>Account 6</h3>
+                <p>Level 600, 12000 V-Bucks</p>
+                <p class="price">€120</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://assetsdelivery.eldorado.gg/v7/_offers-v2_/auth0%7C614b69eb605c800071103b8f_Offer_20240614125434_1123243Large.jpg?w=255" alt="Account 7">
+                <h3>Account 7</h3>
+                <p>Level 700, 14000 V-Bucks</p>
+                <p class="price">€140</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://i.ebayimg.com/images/g/KOwAAOSwvIplioen/s-l500.png" alt="Account 8">
+                <h3>Account 8</h3>
+                <p>Level 800, 16000 V-Bucks</p>
+                <p class="price">€160</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://epicnpc.b-cdn.net/s3/xf/internal_data/attachments/4835/4835563-541a57ca7fc0089abee8cf8b3a061ae4.png" alt="Account 9">
+                <h3>Account 9</h3>
+                <p>Level 900, 18000 V-Bucks</p>
+                <p class="price">€180</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <div class="account">
+                <img src="https://assetsdelivery.eldorado.gg/v7/_offers-v2_/auth0%7C5f81de5bd8e931006eff1ccd_Offer_20240609172738_8145204Large.jpg?w=255" alt="Account 10">
+                <h3>Account 10</h3>
+                <p>Level 1000, 20000 V-Bucks</p>
+                <p class="price">€200</p>
+                <a href="#" class="button" onclick="showPage('payment')">Jetzt kaufen</a>
+            </div>
+            <!-- Add more accounts as needed -->
+        </div>
+    </div>
+
+    <div id="about" class="container hidden">
+        <h2>Über uns</h2>
+        <p>Unser Team besteht aus leidenschaftlichen Fortnite-Spielern, die es sich zur Aufgabe gemacht haben, anderen Spielern dabei zu helfen, ihre Spielerfahrung zu verbessern. Wir verstehen, wie wichtig es ist, den perfekten Account zu haben.
